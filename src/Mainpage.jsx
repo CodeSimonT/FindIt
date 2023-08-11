@@ -12,13 +12,17 @@ import {
 const Mainpage = () => {
   return (
     <>
-      <Hero />
-      <Filter />
-      <TopOffers />
-      <Brands />
-      <FindIdApart />
-      <LatestCars />
-      <AutoMarket />
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <div className="max-width-1300">
+          <Hero />
+          <Filter />
+          <TopOffers />
+          <Brands />
+          <FindIdApart />
+          <LatestCars />
+          <AutoMarket />
+        </div>
+      </div>
     </>
   );
 };

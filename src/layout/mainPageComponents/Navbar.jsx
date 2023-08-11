@@ -4,11 +4,12 @@ import { flexStyle } from "../../style/style.js";
 import { Link } from "react-router-dom";
 import { box, arrowbottom, person, add, menu } from "../../assets/icons";
 import { navLinks } from "../../constants/contant.js";
+import Dropdown from "../../middleware/Dropdown";
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed-top nav-style">
-        <div className="d-flex justify-content-between px-3 py-4">
+      <nav className="container-fluid fixed-top nav-style">
+        <div className="d-flex justify-content-between py-4">
           <div className={`${flexStyle.flexCenter}`}>
             {/* logo */}
             <div className="logo-container-size me-2">
@@ -27,31 +28,11 @@ const Navbar = () => {
                   Home
                 </Link>
               </div>
+              {/* dropdown links */}
               {navLinks.map((item, index) => (
-                <div className="dropdown" key={index}>
-                  <div
-                    className={`dropdown-style px-3 gray-text ${flexStyle.flexCenter}`}
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {item.title}
-                    <div className="icon-size-sm ms-1">
-                      <img src={arrowbottom} alt="" className="w-100" />
-                    </div>
-                  </div>
-
-                  <ul className="dropdown-menu">
-                    {item.links.map((data) => (
-                      <li key={data.id}>
-                        <Link className="dropdown-item">{data.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Dropdown value={item} key={index} />
               ))}
             </div>
-            {/* dropdown links */}
             <div className={`${flexStyle.flexCenter} ms-2`}></div>
           </div>
           {/* navButton */}

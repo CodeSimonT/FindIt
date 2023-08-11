@@ -8,7 +8,7 @@ import automatic100 from "./icons8-automatic-100.png";
 import bars from "./icons8-bars-50.png";
 import bmw from "./icons8-bmw-50.png";
 import box from "./icons8-box-50.png";
-import boxcalculator from "./icons8-calculator-100.png";
+import calculator from "./icons8-calculator-100.png";
 import check from "./icons8-check-50.png";
 import circledi from "./icons8-circled-i-100.png";
 import close from "./icons8-close-50.png";
@@ -59,7 +59,7 @@ export {
   bmw,
   box,
   person100,
-  boxcalculator,
+  calculator,
   check,
   circledi,
   close,
