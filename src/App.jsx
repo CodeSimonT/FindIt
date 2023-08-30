@@ -1,5 +1,5 @@
 import React from "react";
-import PageRoutes from "./layout/PageRoutes";
+import PageRoutes from "./route/PageRoutes";
 const App = () => {
   return (
     <>

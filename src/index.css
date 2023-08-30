@@ -1,7 +1,10 @@
 :root {
   --background-color: #1f1b2d;
   --orange: #fd5631;
+  --darkgreen: #0fc98b;
+  --green: #07c98b;
   --blue: #3c76f2;
+  --yellow: #fdbc31;
   --hyperlink-color: #b1afb6;
   --border-color: rgba(177, 175, 182, 0.5);
   --navBackgroundColor: rgba(31, 27, 45, 0.9);
@@ -25,7 +28,40 @@
   background: #fd5631;
   border-radius: 5px;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* checkbox design */
+.form-check-input[type="checkbox"] {
+  background-color: transparent;
+  color: #fd5631;
+  border: 2px solid gray;
+  box-shadow: none;
+}
+.form-check-input[type="checkbox"]:checked {
+  background-color: transparent;
+  color: orange;
+  border: 2px solid #fd5631;
+}
+/* range style */
+input[type="range"] {
+  accent-color: #fd5631;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+/* input[type="checkbox"]:checked:after {
+  content: "\2713";
+  color: green;
+} */
 /* globals */
 * {
   color: white;
@@ -40,6 +76,9 @@ p {
   padding: 0;
   margin: 0;
 }
+body {
+  font-family: "Nunito", sans-serif;
+}
 li {
   list-style: none;
 }
@@ -47,6 +86,12 @@ input {
   background-color: transparent;
   border: none;
   outline: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.style-list {
+  list-style: circle;
 }
 .max-width-1300 {
   max-width: 1400px;
@@ -60,6 +105,12 @@ input {
 }
 .background-color {
   background-color: var(--background-color);
+}
+.blue-background {
+  background-color: var(--blue);
+}
+.green-background {
+  background-color: var(--green);
 }
 .dark-background-color {
   background-color: var(--background-color);
@@ -85,14 +136,30 @@ input {
   width: 20px;
   height: 20px;
 }
+.icon-size-lg {
+  width: 50px;
+  height: 50px;
+}
 .gray-text {
   color: var(--hyperlink-color);
 }
 .orange-text {
   color: var(--orange);
 }
+.green-text {
+  color: var(--darkgreen);
+}
+.white-text {
+  color: white;
+}
 .orange-background {
   background-color: var(--orange);
+}
+.white-background {
+  background-color: white;
+}
+.gray-background {
+  background-color: var(--background-slight-transparent);
 }
 /* end globals */
 .nav-style {
@@ -103,12 +170,36 @@ input {
 .border-right {
   border-right: 0.1px solid var(--border-color);
 }
+.border-top-fixed {
+  border-top: 0.1px solid var(--border-color);
+}
+.border-dash {
+  border: 1px dashed var(--border-color);
+}
+.border-left-fixed {
+  border-left: 2px solid white;
+}
+.border-left-transparent {
+  border-left: 2px solid transparent;
+}
+.border-right-fixed {
+  border-right: 0.1px solid var(--border-color);
+}
 .border-bottom-gray {
   border-bottom: 0.1px solid var(--border-color);
 }
 .border-style-gray {
   border: 0.1px solid var(--border-color);
   border-radius: 5px;
+}
+.accordion-border-style {
+  border: 0.1px solid var(--border-color);
+}
+.border-gray {
+  border: 0.1px solid var(--border-color);
+}
+.border-orange {
+  border: 0.1px solid var(--orange);
 }
 @media only screen and (max-width: 992px) {
   .border-right {
@@ -119,6 +210,8 @@ input {
 .dropdown-style {
   background-color: transparent;
   border: none;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 .lightgray-bg-color {
   background-color: var(--border-color);
@@ -171,4 +264,56 @@ input {
 .w-60 {
   width: 40%;
 }
-/* footer  */
+.input-style {
+  background-color: var(--background-slight-transparent);
+}
+.input-style-width {
+  width: 180px;
+}
+.range-style-width {
+  width: 100px;
+}
+.input-style-full {
+  width: 100%;
+}
+.accordion-header {
+  background-color: transparent !important;
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
+.border-Y {
+  border-top: 0.1px solid var(--border-color);
+  border-bottom: 0.1px solid var(--border-color);
+}
+.min-hight-sm {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+.min-hight-sm::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Handle */
+.min-hight-sm::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+.heigth-200 {
+  height: 100px;
+  overflow-y: hidden;
+}
+.underline {
+  text-decoration: underline;
+}
+.pt-130 {
+  padding-top: 130px;
+}
+.top100 {
+  top: 100px;
+}
+/* profile style */

@@ -44,8 +44,14 @@ import twitter from "./icons8-twitter-50.png";
 import volkswagen from "./icons8-volkswagen-50.png";
 import arrowbottom from "./icons8-arrow-100.png";
 import add from "./icons8-plus-math-50.png";
+import arrowgray from "./icons8-arrowgray-50.png";
+import gridicon from "./icons8-grid-100.png";
+import listicon from "./icons8-list-100.png";
 
 export {
+  gridicon,
+  listicon,
+  arrowgray,
   add,
   arrowbottom,
   arrowwhite,
