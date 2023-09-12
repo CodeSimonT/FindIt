@@ -207,6 +207,10 @@ input {
     border-right: none;
   }
 }
+.dropdown-style-nav {
+  background-color: var(--background-color);
+  border: 0.1px solid var(--border-color);
+}
 .dropdown-style {
   background-color: transparent;
   border: none;

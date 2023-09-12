@@ -4,6 +4,7 @@ import { flexStyle } from "src/style/style.js";
 import { Link } from "react-router-dom";
 import { box, person, add, menu } from "src/assets/icons";
 import { navLinks } from "src/data/constant";
+import { DropdownNav } from "src/components/NavCom";
 import { Dropdown } from "src/components/Model";
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
               </div>
               {/* dropdown links */}
               {navLinks.map((item, index) => (
-                <Dropdown value={item} key={index} />
+                <DropdownNav value={item} key={index} />
               ))}
             </div>
             <div className={`${flexStyle.flexCenter} ms-2`}></div>
